@@ -1,16 +1,17 @@
 export const style = {
   color: "lightgreen",
-  height: "50vh",
   margin: "auto",
   textAlign: "center"
 };
 
 export const gridStyle = {
-  boxShadow: "1px 2px 3px #555",
+  border: "1px solid lightgreen",
   display: "flex",
   flexWrap: "wrap",
+  justifyContent: "center",
   margin: "0 auto",
-  width: "252px"
+  height: "324px",
+  width: "324px"
 };
 
 export const gridBoxStyle = bgColor => ({
@@ -18,7 +19,7 @@ export const gridBoxStyle = bgColor => ({
   border: "2px solid #000",
   color: "#fff",
   cursor: "pointer",
-  fontSize: "4em",
-  height: "80px",
-  width: "80px"
+  fontSize: "5em",
+  height: "104px",
+  width: "104px"
 });
