@@ -5,6 +5,8 @@ import Model from "./model";
 import Grid from "./grid";
 import GridItem from "./gridItem";
 
+import Button from "../../Button";
+
 export default class TicTacToe extends React.Component {
   state = cloneDeep(Model);
 
@@ -74,7 +76,13 @@ export default class TicTacToe extends React.Component {
         {this.state.winner.length > 0 && (
           <>
             <h1>{this.state.winner} wins!!!</h1>
-            <button onClick={this.resetGame}>Play Again!</button>
+
+            <Button
+              styles={{ background: "lightgreen" }}
+              onClick={this.resetGame}
+            >
+              Play Again!
+            </Button>
           </>
         )}
 
