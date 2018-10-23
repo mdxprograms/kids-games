@@ -1,7 +1,7 @@
 import React from "react";
 
 import Model from "./model";
-import Styles from "./styles";
+import { gridBoxStyle } from "./styles";
 
 const { playerOne, playerTwo } = Model.players;
 
@@ -11,7 +11,7 @@ const GridItem = ({ hasTurn, setMarker, marker }) => {
   return (
     <div
       onClick={() => setMarker(marker.index, hasTurn)}
-      style={Styles.gridBoxStyle(colors[marker.value])}
+      style={gridBoxStyle(colors[marker.value])}
     >
       {marker.value}
     </div>

@@ -1,10 +1,10 @@
 import React from "react";
 
-import Styles from "./styles";
+import { gridStyle } from "./styles";
 
 const Grid = props => {
   return (
-    <div style={Styles.gridStyle} className="tictactoe-grid">
+    <div style={gridStyle} className="tictactoe-grid">
       {props.children}
     </div>
   );

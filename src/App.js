@@ -8,6 +8,14 @@ import Button from "./components/Button";
 
 import leoImg from "./images/users/leo.jpg";
 import zoeImg from "./images/users/zoe.jpg";
+import bg2Img from "./images/bg2.jpg";
+
+const overlayStyle = () => ({
+  height: "100vh",
+  background: `url(${bg2Img}) center/cover no-repeat`,
+  position: "absolute",
+  width: "100vw"
+});
 
 class App extends Component {
   state = {
@@ -28,19 +36,30 @@ class App extends Component {
     const View = this.state.currentView;
 
     return (
-      <div id="app">
-        {this.state.currentView !== HomeView && (
-          <Button
-            styles={{ background: "silver" }}
-            onClick={() => this.changeView(this.state.views.home)}
-          >
-            Go Back
-          </Button>
-        )}
+      <>
+        <div style={overlayStyle()} />
+        <div
+          style={{
+            height: "100vh",
+            backgroundColor: "rgb(0, 0, 0, 0.85)",
+            width: "100vw",
+            position: "absolute"
+          }}
+          id="app"
+        >
+          {this.state.currentView !== HomeView && (
+            <Button
+              styles={{ background: "silver" }}
+              onClick={() => this.changeView(this.state.views.home)}
+            >
+              Go Back
+            </Button>
+          )}
 
-        <Header appState={this.state} changeView={this.changeView} />
-        <View appState={this.state} changeView={this.changeView} />
-      </div>
+          <Header appState={this.state} changeView={this.changeView} />
+          <View appState={this.state} changeView={this.changeView} />
+        </div>
+      </>
     );
   }
 }

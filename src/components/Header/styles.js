@@ -1,5 +1,5 @@
 export const styles = () => ({
-  margin: "30px auto",
+  margin: "0 auto 30px",
   textAlign: "center",
   width: "50%"
 });
@@ -13,5 +13,5 @@ export const playersBlockStyles = () => ({
   position: "absolute",
   margin: "0 auto",
   right: "2vw",
-  top: "15vh"
+  bottom: "2.5vh"
 });

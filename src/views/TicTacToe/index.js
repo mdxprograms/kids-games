@@ -7,6 +7,8 @@ import GridItem from "./gridItem";
 
 import Button from "../../components/Button";
 
+import { style } from "./styles";
+
 export default class TicTacToe extends React.Component {
   state = cloneDeep(Model);
 
@@ -71,7 +73,7 @@ export default class TicTacToe extends React.Component {
 
   render() {
     return (
-      <div style={{ textAlign: "center" }} className="tictactoe">
+      <div style={style} className="tictactoe">
         <h2>Tic Tac Toe!</h2>
         <h4>Turn: {this.state.turnNumber}</h4>
 
