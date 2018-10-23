@@ -43,9 +43,11 @@ export default class TicTacToe extends React.Component {
     const { playerOne, playerTwo } = this.state.players;
 
     if (typeof this.hasWinCondition(winIndex, "X") !== "undefined") {
-      this.setState({ winner: playerOne.name });
+      this.setState({ winner: `${playerOne.name} wins!!` });
     } else if (typeof this.hasWinCondition(winIndex, "O") !== "undefined") {
-      this.setState({ winner: playerTwo.name });
+      this.setState({ winner: `${playerTwo.name} wins!!` });
+    } else if (this.state.turnNumber === 10) {
+      this.setState({ winner: "It's a tie!" });
     }
   };
 
@@ -75,7 +77,7 @@ export default class TicTacToe extends React.Component {
 
         {this.state.winner.length > 0 && (
           <>
-            <h1>{this.state.winner} wins!!!</h1>
+            <h1>{this.state.winner}</h1>
 
             <Button
               styles={{ background: "lightgreen" }}
