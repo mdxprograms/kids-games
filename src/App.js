@@ -25,8 +25,10 @@ class App extends Component {
 
     return (
       <div id="app">
-        <Header appState={this.state} changeView={this.changeView} />
-        <View appState={this.state} selectUser={this.selectUser} />
+        {this.state.currentView !== HomeView && (
+          <Header appState={this.state} changeView={this.changeView} />
+        )}
+        <View appState={this.state} changeView={this.changeView} />
       </div>
     );
   }
