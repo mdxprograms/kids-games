@@ -1,24 +1,8 @@
 import React from "react";
 
-import Player from "./components/Player";
+import Player from "../Player";
 
-const styles = () => ({
-  margin: "30px auto",
-  textAlign: "center",
-  width: "50%"
-});
-
-const navStyles = () => ({
-  display: "flex",
-  justifyContent: "center"
-});
-
-const playersBlockStyles = () => ({
-  position: "absolute",
-  margin: "0 auto",
-  right: "2vw",
-  top: "15vh"
-});
+import { styles, navStyles, playersBlockStyles } from "./styles";
 
 const Header = ({ appState, changeView }) => (
   <header style={styles()}>

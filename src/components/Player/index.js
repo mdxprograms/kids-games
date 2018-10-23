@@ -1,9 +1,6 @@
 import React from "react";
 
-const imgStyles = color => ({
-  border: `4px solid ${color}`,
-  width: "10vw"
-});
+import { imgStyles } from "./styles";
 
 const Player = ({ user }) => (
   <div>

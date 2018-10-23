@@ -3,11 +3,11 @@ import React, { Component } from "react";
 import HomeView from "./views/Home";
 import TicTacToeView from "./views/TicTacToe";
 
-import Header from "./Header";
-import Button from "./Button";
+import Header from "./components/Header";
+import Button from "./components/Button";
 
-import leoImg from "./images/leo.jpg";
-import zoeImg from "./images/zoe.jpg";
+import leoImg from "./images/users/leo.jpg";
+import zoeImg from "./images/users/zoe.jpg";
 
 class App extends Component {
   state = {
