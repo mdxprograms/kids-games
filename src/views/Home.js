@@ -10,8 +10,8 @@ const Home = ({ appState, changeView }) => (
       <Button
         styles={{
           background: `url(${ticTacToeImg}) center/cover no-repeat`,
-          height: "12vw",
-          width: "12vw"
+          height: "120px",
+          width: "120px"
         }}
         onClick={() => changeView(appState.views.ticTacToe)}
       />
