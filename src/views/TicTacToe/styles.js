@@ -5,7 +5,8 @@ export const style = {
 };
 
 export const gridStyle = {
-  border: "1px solid lightgreen",
+  border: "4px solid lightgreen",
+  borderRadius: "4px",
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "center",
