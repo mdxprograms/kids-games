@@ -1,6 +1,6 @@
 import React from "react";
 
-import Button from "./Button";
+import Player from "./components/Player";
 
 const styles = () => ({
   margin: "30px auto",
@@ -13,19 +13,21 @@ const navStyles = () => ({
   justifyContent: "center"
 });
 
-const navItemStyles = () => ({
-  margin: "5px"
+const playersBlockStyles = () => ({
+  position: "absolute",
+  margin: "0 auto",
+  right: "2vw",
+  top: "15vh"
 });
 
 const Header = ({ appState, changeView }) => (
   <header style={styles()}>
     <nav style={navStyles()}>
-      <Button
-        styles={{ background: "silver" }}
-        onClick={() => changeView(appState.views.home)}
-      >
-        Go Back
-      </Button>
+      <div style={playersBlockStyles()}>
+        {appState.users.map(user => (
+          <Player key={user.name} user={user} />
+        ))}
+      </div>
     </nav>
   </header>
 );

@@ -47,7 +47,7 @@ export default class TicTacToe extends React.Component {
     } else if (typeof this.hasWinCondition(winIndex, "O") !== "undefined") {
       this.setState({ winner: `${playerTwo.name} wins!!` });
     } else if (this.state.turnNumber === 10) {
-      this.setState({ winner: "It's a tie!" });
+      this.setState({ winner: "It's a draw!" });
     }
   };
 

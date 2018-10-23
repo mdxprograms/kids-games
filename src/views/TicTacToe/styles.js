@@ -9,6 +9,7 @@ export default {
   gridBoxStyle: bgColor => ({
     backgroundColor: bgColor,
     border: "2px solid #000",
+    cursor: "pointer",
     fontSize: "4em",
     height: "80px",
     width: "80px"

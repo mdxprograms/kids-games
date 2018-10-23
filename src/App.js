@@ -4,14 +4,18 @@ import HomeView from "./views/Home";
 import TicTacToeView from "./views/TicTacToe";
 
 import Header from "./Header";
+import Button from "./Button";
+
+import leoImg from "./images/leo.jpg";
+import zoeImg from "./images/zoe.jpg";
 
 class App extends Component {
   state = {
     currentUser: null,
     currentView: HomeView,
     users: [
-      { name: "Leo", age: 5, favColor: "orange" },
-      { name: "Zoe", age: 3, favColor: "pink" }
+      { name: "Leo", age: 5, favColor: "orange", image: leoImg },
+      { name: "Zoe", age: 3, favColor: "pink", image: zoeImg }
     ],
     views: { home: HomeView, ticTacToe: TicTacToeView }
   };
@@ -26,8 +30,15 @@ class App extends Component {
     return (
       <div id="app">
         {this.state.currentView !== HomeView && (
-          <Header appState={this.state} changeView={this.changeView} />
+          <Button
+            styles={{ background: "silver" }}
+            onClick={() => this.changeView(this.state.views.home)}
+          >
+            Go Back
+          </Button>
         )}
+
+        <Header appState={this.state} changeView={this.changeView} />
         <View appState={this.state} changeView={this.changeView} />
       </div>
     );
